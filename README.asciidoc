@@ -1,0 +1,19 @@
+= 99 Erlang Problems 
+
+erl99problems is training repository designed for a quick dip into Erlang functional programming without pain.
+Based on Ninety-Nine Lisp Problems which based on Prolog problem list by werner.hett@hti.bfh.ch.
+
+erl99problems include sync - tool which will compile, reload your code and run unit tests every time once you save your changes.
+
+To get start:
+
+* Install Erlang (if you don't have).
+* Open terminal
+* git clone https://github.com/spylik/erl99problems
+* cd erl99problems && make
+* ./start.sh (and do not close terminal).
+* Open src/erl99problems.erl in your favorite editor, read annotation and try to solve your first p01 problem. Once you save your changes it will automatically recompile code and you can see the result in terminal window where you run ./start.sh
+
+Each problem should be solved without calls to Erlang standart module lists and without calls to Erlang build-in-functions (BIF).
+
+Happy hacking.
