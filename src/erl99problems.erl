@@ -14,7 +14,10 @@
 %%%    > 4
 %%% @end
 
-%--- delete this line and write your code for p01 here ---%
+p01([T|[]]) ->
+    T;
+p01([_H|T]) ->
+    p01(T).
 
 %%% @doc p02 Find the last but one box of a list.
 %%% eg
