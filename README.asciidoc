@@ -14,6 +14,12 @@ To get start:
 * ./start.sh (and do not close terminal).
 * Open src/erl99problems.erl in your favorite editor, read annotation and try to solve your first p01 problem. Once you save your changes it will automatically recompile code and you can see the result in terminal window where you run ./start.sh
 
-Each problem should be solved without calls to Erlang standart module lists and without calls to Erlang build-in-functions (BIF).
+Each problem should be solved without calls to Erlang standart modules (lists:, gb_trees:, etc) and without calls to Erlang build-in-functions (BIF).
+
+Some useful links which will helps you to solve problems:
+
+http://erlang.org/doc/programming_examples/funs.html
+http://erlang.org/doc/programming_examples/list_comprehensions.html
+http://learnyousomeerlang.com/starting-out-for-real
 
 Happy hacking.
