@@ -1,1 +1,0 @@
-erl -sname erl99problems -config .config +c true +C multi_time_warp -pa ebin/ test/ -env ERL_LIBS deps -eval 'ok = sync:go(), RunTests = fun(Mods) -> _ = [Mod:test() || Mod <- Mods, erlang:function_exported(Mod, test, 0)], [eunit:test(Mod) || Mod <- Mods] end, sync:onsync(RunTests)'

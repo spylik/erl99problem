@@ -10,11 +10,12 @@ To get start:
 * Install Erlang (if you don't have).
 * Open terminal
 * git clone https://github.com/spylik/erl99problems
-* cd erl99problems && make
-* ./start.sh (and do not close terminal).
+* cd erl99problems && make tests
+* make shell.
 * Open src/erl99problems.erl in your favorite editor, read annotation and try to solve your first p02 problem (p01 solved already as example).
 
-First time you should run eunit:test(erl99problems) manually (where you run start.sh), but after sync will take care tests and and run it every time once you save your changes. You can implement tests for your functions in test/erl99problems_tests.erl as well.
+erl99problems repo already contain tests for first 3 problems. Rest you should implement by yourself in test/erl99problems_tests.erl.
+Tests will run automatically everytime once you save your changes.
 
 Each problem should be solved without calls to Erlang standart modules (lists:, gb_trees:, etc) and without calls to Erlang build-in-functions (BIF).
 
