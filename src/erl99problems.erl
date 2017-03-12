@@ -25,13 +25,23 @@ p01([_H|T]) ->
 %%%    > [f,g]
 %%% @end
 
-%--- delete this line and write your code for p02 here ---%
+p02([H1|[H2|[]]]) ->
+    [H1,H2];
+p02([_H|T]) ->
+    p02(T).
 
 %%% @doc p03 Find the K'th element of a list
 %%% eg
 %%%     erl99problems:p03([1,2,3,f,b,3,f,s], 4).
 %%%     > f
 %%% @end
+p03(List, El) ->
+    p03(List, El, 1).
+
+p03([H|_T], _Num, _Num) ->
+    H;
+p03([_H|T], El, Num) ->
+    p03(T, El, Num+1).
 
 %--- delete this line and write your code for p03 here ---%
 
@@ -40,7 +50,12 @@ p01([_H|T]) ->
 %%%     erl99problems:p04([1,2,x,3,4,5]).
 %%%     > 6
 %%% @end
-
+p04(List) ->
+    p04(List, 1).
+p04([_H|[]], Num) ->
+    Num;
+p04([_H|T], Num) ->
+    p04(T, Num+1).
 %--- delete this line and write your code for p04 here ---%
 
 %%% @doc p05 Reverse a list.

@@ -13,6 +13,7 @@ p01_test() ->
 		true ->
             ?assertEqual(4, ?TM:p01([1,2,3,4])),
             ?assertEqual(2, ?TM:p01([1,2,3,4,f,2])),
+            ?assertEqual(2, ?TM:p01([1,<<"test">>,3,4,f,2])),
             ?assertEqual(x, ?TM:p01([x]));
 		_ -> 
 			{skipped, {abort, func_for_test_not_yet_implemented}}
@@ -36,3 +37,20 @@ p03_test() ->
 		_ ->
 			{skipped, {abort, func_for_test_not_yet_implemented}}
 	end.
+
+p04_test() ->
+    ?assertEqual(3, ?TM:p04([1,2,3])),
+    ?assertEqual(4, ?TM:p04([1,f,5,3])),
+    ?assertEqual(5, ?TM:p04([1,<<"test">>,s,2,3])),
+    ?assertEqual(1, ?TM:p04([x])).
+
+p05_test() ->
+	case erlang:function_exported(?TM, ?TF, 1) of
+		true -> 
+            ?assertEqual([3,<<"test">>,1], ?TM:p05([1,<<"test">>,3])),
+            ?assertEqual([3,f,2,1], ?TM:p05([1,2,f,3])),
+            ?assertEqual([x], ?TM:p05([x]));
+		_ ->
+			{skipped, {abort, func_for_test_not_yet_implemented}}
+	end.
+
